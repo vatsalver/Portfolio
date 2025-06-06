@@ -14,8 +14,8 @@ export const ContactSection = () => {
 
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Message not sent!",
+        description: "Please Connect through LinkedIn/Mail.",
       });
       setIsSubmitting(false);
     }, 1500);
