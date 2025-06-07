@@ -1,5 +1,5 @@
 import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
-import { cn } from "@/lib/utils";
+//import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
@@ -94,13 +94,10 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
+          <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
@@ -157,9 +154,7 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
-                )}
+                className="cosmic-button w-full flex items-center justify-center gap-2"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
